@@ -6,12 +6,28 @@
     <meta name="description" content=" FILL ME IN ">
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
-
+    <script>
+        // https://github.com/filamentgroup/loadCSS
+        !function(e){"use strict";
+            var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
+                return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
+                    setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
+            "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
+    </script>
+      <style>
+          body { background: #fff; }
+          header, footer, .container { max-width: 45em; margin: 0 auto; }
+          footer, .container { display: none; }
+          header { padding: 0 0.5em; color: #C90B0B; }
+          header img { border-radius: 40px; float: left; }
+          header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
+          header p span { font-size: 0.8em; font-weight: normal;}
+      </style>
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
     <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" media="screen">-->
     <!--<link href="https://res.cloudinary.com/technophilic/raw/upload/v1499039941/style.min_v4e9qg.css" rel="stylesheet" media="screen">-->
-    <link href="https://res.cloudinary.com/technophilic/raw/upload/v1499040224/print.min_kmggri.css" rel="stylesheet" media="print">
-    
+    <!--<link href="https://res.cloudinary.com/technophilic/raw/upload/v1499040224/print.min_kmggri.css" rel="stylesheet" media="print">-->
+
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
@@ -22,6 +38,11 @@
     </script>
     <!--<script async src="https://www.google-analytics.com/analytics.js"></script>-->
     <script async src="https://res.cloudinary.com/technophilic/raw/upload/v1499040235/perf.min_y6jiqr.js"></script>
+    <script>
+        loadCSS("http://res.cloudinary.com/technophilic/raw/upload/v1499304868/style.min_sppugi.css");
+        loadCSS("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+        loadCSS("https://res.cloudinary.com/technophilic/raw/upload/v1499040224/print.min_kmggri.css");
+    </script>
   </head>
 
   <body>

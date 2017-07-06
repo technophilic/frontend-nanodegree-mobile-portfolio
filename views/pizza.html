@@ -6,6 +6,12 @@
 </head>
 
 <body>
+<div class="row">
+  <div id="movingWrapper" class="col-md-6">
+    <div id="movingPizzas1">
+    </div>
+  </div>
+</div>
   <div class="container">
     <div id="header" class="row">
       <div class="col-md-6">
@@ -30,8 +36,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div id="movingPizzas1" class="col-md-6">
       </div>
     </div>
     <div id="callToAction" class="row">
@@ -98,7 +102,7 @@
           </div>
           <div id="pizzaSize" class="col-md-6">Medium</div>
           <div class="col-md-12">
-            <input id="sizeSlider" type="range" min="1" max="3" value="2" step="1" onchange="resizePizzas(this.value)"></input>
+            <input id="sizeSlider" type="range" min="1" max="3" value="2" step="1" onchange="resizePizzas(this.value)">
           </div>
         </div>
         <div id="randomPizzas" class="row">
@@ -140,5 +144,4 @@
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
-</html>
 </html>
