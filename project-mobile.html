@@ -12,6 +12,48 @@
     !function(e) { "use strict"; var n = function(n, t, o) { function i(e) { return f.body ? e() : void setTimeout(function() { i(e) }) } var d, r, a, l, f = e.document, s = f.createElement("link"), u = o || "all" return t ? d = t : (r = (f.body || f.getElementsByTagName("head")[0]).childNodes, d = r[r.length - 1]), a = f.styleSheets, s.rel = "stylesheet", s.href = n, s.media = "only x", i(function() { d.parentNode.insertBefore(s, t ? d : d.nextSibling) }), l = function(e) { for (var n = s.href, t = a.length; t--;) if (a[t].href === n) return e() setTimeout(function() { l(e) }) }, s.addEventListener && s.addEventListener("load", function() { this.media = u }), s.onloadcssdefined = l, l(function() { s.media !== u && (s.media = u) }), s } "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n }("undefined" != typeof global ? global : this)
   </script>
   <style>
+    html {
+      font-size: 100%;
+      overflow-y: scroll;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: none;
+    }
+    body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
+    body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
+
+    a { color: #12C; }
+    a:visited { color: #61C; }
+    a:focus { outline: thin dotted; }
+    a:hover, a:active { color: #c00; outline: 0; }
+    b, strong { font-weight: bold; }
+    pre, code { font-family: monospace, monospace; font-size: 1em; }
+    ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
+    img { border: 0; max-width: 100%; }
+
+    .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+    }
+
+    .content { padding: 1em 1em; }
+    .content li { list-style-type: none; font-size: 1.1em;}
+    li img { float:left; padding-right: 1em; }
+    li p { font-size: 0.9em; font-style: italic; }
+
+    footer {
+      padding: 0 0.5em;
+      border-top: 1px solid #ccc;
+    }
+    footer span { float: right; font-style: italic; }
+
+    /* Smartphones (portrait) */
+    @media only screen and (max-width: 480px) {
+      body { font-size: 12px;}
+      header p { padding-left: 4.5em;}
+    }
+    .container,footer{display: block;}
+
     body {
       background: #fff;
     }
