@@ -468,7 +468,7 @@ var resizePizzas = function(size) {
 
     // Iterates through pizza elements on the page and changes their widths
     function changePizzaSizes(size) {
-        var pizzas = document.querySelectorAll(".randomPizzaContainer"); //DOM is queried only once.
+        var pizzas = document.getElementsByClassName("randomPizzaContainer"); //DOM is queried only once.
         var dx = determineDx(pizzas[0], size); //calculations are refactored outside the loop to increase performance
         var newwidth = (pizzas[0].offsetWidth + dx) + 'px'; //refactored outside so that recalculate styles is called before layout inside the loop
         for (var i = 0; i < pizzas.length; i++) {
@@ -488,8 +488,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-    var pizzasDiv = document.getElementById("randomPizzas");
     pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -531,10 +531,7 @@ function updatePositions(x) {
     var scroll = ((x === 'init') ? document.body.scrollTop : x.srcElement.scrollingElement.scrollTop) / 1250;
     for (var i = 0; i < items.length; i++) {
         var phase = Math.sin(scroll + (i % 5));
-        if (x === 'init')
-            items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-        else
-            items[i].style.transform = 'translateX(' + 100 * phase + 'px)'; //using transform to prevent layout from occurring
+        items[i].style.transform = 'translateX(' + 100 * phase + 'px)'; //using transform to prevent layout from occurring
     }
     // User Timing API to the rescue again. Seriously, it's worth learning.
     // Super easy to create custom metrics.
@@ -553,14 +550,16 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
     var s = 256;
+    var total=Math.floor(window.screen.height/s)*cols;
     var bgContainer = document.querySelector("#movingPizzas1");
-    for (var i = 0; i < 25; i++) {
+    for (var i = 0; i < total; i++) {
         var elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
         elem.style.height = "100px";
         elem.style.width = "73.333px";
         elem.basicLeft = (i % cols) * s;
+        elem.style.left = (i % cols) * s + 'px';
         elem.style.top = (Math.floor(i / cols) * s) + 'px';
         bgContainer.appendChild(elem);
     }
