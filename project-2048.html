@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" FILL ME IN ">
-    <meta name="author" content=" FILL ME IN ">
-    <title>Cameron Pittman: Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=" FILL ME IN ">
+  <meta name="author" content=" FILL ME IN ">
+  <title>Cameron Pittman: Portfolio</title>
+  <script>
+      // https://github.com/filamentgroup/loadCSS
+      ! function(e) { "use strict"; var n = function(n, t, o) { function i(e) { return f.body ? e() : void setTimeout(function() { i(e) }) } var d, r, a, l, f = e.document, s = f.createElement("link"), u = o || "all" return t ? d = t : (r = (f.body || f.getElementsByTagName("head")[0]).childNodes, d = r[r.length - 1]), a = f.styleSheets, s.rel = "stylesheet", s.href = n, s.media = "only x", i(function() { d.parentNode.insertBefore(s, t ? d : d.nextSibling) }), l = function(e) { for (var n = s.href, t = a.length; t--;) if (a[t].href === n) return e() setTimeout(function() { l(e) }) }, s.addEventListener && s.addEventListener("load", function() { this.media = u }), s.onloadcssdefined = l, l(function() { s.media !== u && (s.media = u) }), s } "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n }("undefined" != typeof global ? global : this)
+  </script>
+  <style>
+    body {
+      background: #fff;
+    }
 
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/print.css" rel="stylesheet">
+    header,
+    footer,
+    .container {
+      max-width: 45em;
+      margin: 0 auto;
+    }
 
-    <script>
-      (function(w,g){w['GoogleAnalyticsObject']=g;
-      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
+    header {
+      padding: 0 0.5em;
+      color: #C90B0B;
+    }
+
+    header img {
+      border-radius: 40px;
+      float: left;
+    }
+
+    header p {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding-left: 4em;
+    }
+
+    header p span {
+      font-size: 0.8em;
+      font-weight: normal;
+    }
+  </style>
+  <script>
+      (function(w, g) {
+          w['GoogleAnalyticsObject'] = g;
+          w[g] = w[g] || function() {
+                  (w[g].q = w[g].q || []).push(arguments)
+              };
+          w[g].l = 1 * new Date();
+      })(window, 'ga');
 
       // Optional TODO: replace with your Google Analytics profile ID.
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
-    </script>
-    <script src="//www.google-analytics.com/analytics.js"></script>
-    <script src="js/perfmatters.js"></script>
-  </head>
+  </script>
+  <script async src="https://res.cloudinary.com/technophilic/raw/upload/v1499040235/perf.min_y6jiqr.js"></script>
+  <script>
+      loadCSS("https://res.cloudinary.com/technophilic/raw/upload/v1499304868/style.min_sppugi.css");
+      loadCSS("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+      loadCSS("https://res.cloudinary.com/technophilic/raw/upload/v1499040224/print.min_kmggri.css");
+  </script>
+</head>
 
-  <body>
-    <header>
-      <a href="/"><img src="img/profilepic.jpg"></a>
-      <p>Cameron Pittman<br><span>Course Developer</span></p>
-    </header>
+<body>
+<header>
+  <a href="/"><img src="img/profilepic.jpg"></a>
+  <p>Cameron Pittman<br><span>Course Developer</span></p>
+</header>
 
-    <div class="container">
-      <div class="hero">
-        <strong>2048 is awesome!</strong> I loved making my own 2048 with Andy and Sarah. Below, I'm showing off a screenshot from the Udacity version of 2048.
-      </div>
+<div class="container">
+  <div class="hero">
+    <strong>2048 is awesome!</strong> I loved making my own 2048 with Andy and Sarah. Below, I'm showing off a screenshot from the Udacity version of 2048.
+  </div>
 
-      <div class="content">
+  <div class="content">
 
-        <img class="img-responsive" src="img/2048.png">
+    <img class="img-responsive" src="img/2048.png">
 
-        <p>Bacon ipsum dolor sit amet et pork belly porchetta excepteur dolor, laborum laboris magna labore dolore in fugiat beef ribs. Fugiat leberkas nulla do kevin dolore. Flank hamburger dolor swine prosciutto sirloin pig jerky sunt consequat pariatur. Mollit meatloaf nostrud laboris shoulder excepteur velit officia meatball nisi turkey. Nulla jowl spare ribs, et drumstick magna frankfurter.</p>
+    <p>Bacon ipsum dolor sit amet et pork belly porchetta excepteur dolor, laborum laboris magna labore dolore in fugiat beef ribs. Fugiat leberkas nulla do kevin dolore. Flank hamburger dolor swine prosciutto sirloin pig jerky sunt consequat pariatur. Mollit meatloaf nostrud laboris shoulder excepteur velit officia meatball nisi turkey. Nulla jowl spare ribs, et drumstick magna frankfurter.</p>
 
-        <p>Venison spare ribs dolor tri-tip duis turkey. Ut chicken proident ribeye est flank, sed frankfurter. Kielbasa exercitation ullamco leberkas. Landjaeger turkey culpa, tail short loin consectetur salami venison in corned beef eiusmod qui ad leberkas. Tri-tip adipisicing frankfurter ut sirloin rump consectetur. Chuck sint filet mignon labore eiusmod nulla. Venison shankle pork, consectetur nisi bacon spare ribs anim meatball sausage ball tip labore aute reprehenderit adipisicing.</p>
+    <p>Venison spare ribs dolor tri-tip duis turkey. Ut chicken proident ribeye est flank, sed frankfurter. Kielbasa exercitation ullamco leberkas. Landjaeger turkey culpa, tail short loin consectetur salami venison in corned beef eiusmod qui ad leberkas. Tri-tip adipisicing frankfurter ut sirloin rump consectetur. Chuck sint filet mignon labore eiusmod nulla. Venison shankle pork, consectetur nisi bacon spare ribs anim meatball sausage ball tip labore aute reprehenderit adipisicing.</p>
 
-    </div>
+  </div>
 
-    <footer>
-      <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
+  </footer>
+</body>
+
 </html>
